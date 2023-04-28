@@ -29,13 +29,28 @@ h1, h2, h3{
     margin: 0 0 5rem 0;
 }
 h1{
-    font-size: 5rem;
+    font-size: 3.8rem;
+}
+@media (min-width: 768px) { 
+    h1{
+        font-size: 5rem;
+    }
 }
 h2{
-    font-size: 3rem;
+    font-size: 3.2rem;
+}
+@media (min-width: 768px) { 
+    h2{
+        font-size: 4rem;
+    }
 }
 h3{
-    font-size: 3rem;
+    font-size: 2.4rem;
+}
+@media (min-width: 768px) { 
+    h3{
+        font-size: 3rem;
+    }
 }
 .btn{
     background-color: #8cbc00;
@@ -78,19 +93,42 @@ h3{
 .nav-principal{
     padding: 2rem 0;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+@media (min-width: 768px) { 
+    .nav-principal{
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 .hero{
     background-image: url('../img/principal.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    height: 55rem;
+    height: 25rem;
+}
+@media (min-width: 768px) { 
+    .hero{
+        height: 55rem;
+    }
 }
 
 /** Categorias **/
 .categorias{
-    padding-top: 5rem;
+    padding: 5rem 0;
+}
+.categoria{
+    margin-bottom: 2rem;
+}
+@media (min-width: 768px) { 
+    .categoria{
+        margin-bottom: 0;
+    }
+}
+.categoria img{
+    width: 100%;
 }
 .categoria a{
     text-align: center;
@@ -103,11 +141,12 @@ h3{
     color:  #FFF;
     border-bottom-right-radius: 1rem;
 }
-
-.listado-categorias{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+@media (min-width: 768px) { 
+    .listado-categorias{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
 }
 
 
@@ -316,7 +355,7 @@ h3{
 }
 
 .campo input:not([type="radio"]),
-textarea,
+.campo textarea,
 .campo select { 
     flex: 1;
     border: 1px solid #e1e1e1;
